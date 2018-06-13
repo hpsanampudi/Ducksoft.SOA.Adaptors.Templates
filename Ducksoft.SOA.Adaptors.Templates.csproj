@@ -61,6 +61,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssemblyInfo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Clients\xxxDBModel.WcfServiceClient.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -86,11 +91,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>xxxDBModel.IEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="Properties\Ducksoft.SOA.Adaptors.Templates.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Ducksoft.SOA.Adaptors.Templates.nuspec</LastGenOutput>
+    </Content>
+    <Content Include="Properties\AssemblyInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
+    </Content>
     <Content Include="Contracts\Rest\xxxDBModel.RestContracts.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>xxxDBModel.RestContracts.cs</LastGenOutput>
@@ -111,7 +123,11 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>xxxDBModel.WcfServiceClient.cs</LastGenOutput>
     </Content>
-    <None Include="Ducksoft.SOA.Adaptors.Templates.nuspec" />
+    <None Include="Properties\Ducksoft.SOA.Adaptors.Templates.nuspec">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ducksoft.SOA.Adaptors.Templates.tt</DependentUpon>
+    </None>
     <None Include="Ducksoft.SOA.Adaptors.Templates.pfx" />
     <None Include="_CreateNewNuGetPackage\DoNotModify\NuGet.exe" />
   </ItemGroup>
